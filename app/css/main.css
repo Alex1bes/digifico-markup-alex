@@ -52,6 +52,7 @@ a {
   text-align: center;
   position: relative;
   left: -150%;
+  margin-left: -5px;
 }
 .main_menu ul {
   display: inline-block;
@@ -63,7 +64,7 @@ a {
   display: inline-block;
 }
 .main_menu .link {
-  padding: 25px;
+  padding: 15px;
   display: inline-block;
   transition: 1s;
   border-bottom: 2px solid transparent;
@@ -81,14 +82,19 @@ a {
   width: 70%;
   font-weight: normal;
   color: #001489;
+  font-size: 22px;
+  padding-right: 10px;
+  padding-bottom: 7px;
+  margin: 22px 0 0;
 }
 .header_block .date {
   float: right;
   width: 30%;
-  text-align: center;
+  text-align: right;
+  padding-top: 26px;
 }
 .title_section {
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #D8D8D8;
 }
 .title_article {
   position: relative;
@@ -228,6 +234,11 @@ a {
   }
   .static_field {
     margin-top: 20px;
+  }
+  .title_section {
+    font-size: 18px;
+    font-weight: normal;
+    padding-bottom: 7px;
   }
 }
 @media (min-width: 768px) {
