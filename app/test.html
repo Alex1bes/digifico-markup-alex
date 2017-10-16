@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>test</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name=viewport>
+  <style type="text/css">
+body{
+  padding: 15px 0;
+}
+li{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+.logo_text{
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+}
+.main_menu{
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  margin: 30px 0;
+}
+.align{
+  width: 400%;
+  text-align: center;
+  position: relative;
+  left: -150%;
+}
+ul{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  transition: 1s;
+}
+li{
+  display: inline-block;
+}
+.main_menu a{
+  padding: 5px;
+  display: inline-block;
+  transition: 1s ;
+  border-bottom: 3px solid  transparent;
+}
+.main_menu a.active{
+  border-bottom: 3px solid blue;
+  transition-delay: .4s;
+}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+$(function() {
+    $("ul").each(function(indx, ul) {
+        var lis = $("li", ul),
+            width = $(ul).width();
+        lis.each(function(indx, li) {
+            width -= $(li).width();
+            var left = width;
+            width -= $(li).width();
+            $(li).on("click", function(event) {
+                event.preventDefault();
+                $("a", lis).not($("a", li).addClass("active")).removeClass("active");
+                $(ul).css("margin-left", left + "px")
+            });
+            $("a", li).is(".active") && $(li).click()
+        })
+    })
+});
+  </script>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="logo_text">INVESTMENT VIEWS</div>
+  <div class="main_menu">
+    <div class="align">
+      <ul>
+        <li>
+          <a href="index.html" class="active">HIGHLIGHTS</a>
+        </li>
+        <li>
+          <a href="story.html">WHAT'S THE STORY?</a>
+        </li>
+        <li>
+          <a href="table.html">INVESTMENT SOLUTIONS</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="main_menu">
+    <div class="align">
+      <ul>
+        <li>
+          <a href="index.html">HIGHLIGHTS</a>
+        </li>
+        <li>
+          <a href="story.html" class="active">WHAT'S THE STORY?</a>
+        </li>
+        <li>
+          <a href="table.html">INVESTMENT SOLUTIONS</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="main_menu">
+    <div class="align">
+      <ul>
+        <li>
+          <a href="index.html">HIGHLIGHTS</a>
+        </li>
+        <li>
+          <a href="story.html">WHAT'S THE STORY?</a>
+        </li>
+        <li>
+          <a href="table.html" class="active">INVESTMENT SOLUTIONS</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -53,6 +53,8 @@ a {
 }
 .main_menu ul {
   display: inline-block;
+  margin: 20px 0;
+  padding: 0;
 }
 .main_menu li {
   display: inline-block;
