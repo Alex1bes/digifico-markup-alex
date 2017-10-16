@@ -37,8 +37,10 @@ a {
 .logo_text {
   color: #001489;
   text-align: center;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
+  margin-top: 6px;
+  padding: 0 48px;
 }
 .main_menu {
   width: 100%;
@@ -46,25 +48,29 @@ a {
   overflow: hidden;
 }
 .main_menu .align {
-  width: 200%;
+  width: 400%;
   text-align: center;
   position: relative;
-  left: -50%;
+  left: -150%;
 }
 .main_menu ul {
   display: inline-block;
   margin: 20px 0;
   padding: 0;
+  transition: 1s;
 }
 .main_menu li {
   display: inline-block;
 }
-.main_menu a {
+.main_menu .link {
   padding: 25px;
   display: inline-block;
+  transition: 1s;
+  border-bottom: 2px solid transparent;
 }
-.main_menu a.active {
-  border-bottom: 3px solid #001489;
+.main_menu .link.active {
+  border-bottom: 2px solid #001489;
+  transition-delay: .4s;
 }
 .logo_page_img {
   background-size: 100% auto;
@@ -248,4 +254,11 @@ a {
   .column11 {
     text-align: right;
   }
+}
+.back_history {
+  width: 43px;
+  height: 43px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
 }

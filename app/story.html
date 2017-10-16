@@ -9,18 +9,21 @@
 </head>
 <body>
   <div class="wrapper">
+    <a onclick="javascript:history.back(); return false;" class="back_history">
+      <img src="img/back.png" alt="Назад">
+    </a>
     <div class="logo_text">INVESTMENT VIEWS</div>
     <nav class="main_menu">
       <div class="align">
         <ul>
           <li>
-            <a href="index.html">HIGHLIGHTS</a>
+            <a href="index.html" class="link to_index_page">HIGHLIGHTS</a>
           </li>
           <li>
-            <a href="story.html" class="active">WHAT'S THE STORY?</a>
+            <a href="story.html" class="link active">WHAT'S THE STORY?</a>
           </li>
           <li>
-            <a href="table.html">INVESTMENT SOLUTIONS</a>
+            <a href="table.html" class="link to_table_page">INVESTMENT SOLUTIONS</a>
           </li>
         </ul>
       </div>
@@ -39,10 +42,24 @@
   <script src="js/common.js"></script>
   <script>
     $(function() {
-      $( ".wrapper" ).on( "swiperight", swipeleftHandler );
-      function swipeleftHandler( event ){
+      var to_back = $('.wrapper'),
+          page_index = $('.to_index_page'),
+          page_table = $('.to_table_page');
+
+      to_back.on( "swiperight", swipeRightHandler );
+      function swipeRightHandler( event ){
         $(location).attr('href', 'index.html');
       }
+
+      page_index.on('click', function(){
+        $(location).attr('href', 'index.html');
+      });
+
+      page_table.on('click', function(){
+        $(location).attr('href', 'table.html');
+      });
+
+
     });
   </script>
 </body>

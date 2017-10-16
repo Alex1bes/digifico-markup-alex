@@ -25,32 +25,38 @@ a{
 .logo_text{
   color: @blue;
   text-align: center;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
+  margin-top: 6px;
+  padding: 0 48px;
 }
 .main_menu{
   width: 100%;
   display: block;
   overflow: hidden;
   .align{
-    width: 200%;
+    width: 400%;
     text-align: center;
     position: relative;
-    left: -50%;
+    left: -150%;
   }
   ul{
     display: inline-block;
     margin: 20px 0;
     padding: 0;
+    transition: 1s;
   }
   li{
     display: inline-block;
   }
-  a{
+  .link{
     padding: 25px;
     display: inline-block;
+    transition: 1s;
+    border-bottom: 2px solid transparent;
     &.active{
-      border-bottom: 3px solid @blue;
+      border-bottom: 2px solid @blue;
+      transition-delay: .4s;
     }
   }
 }
@@ -272,3 +278,11 @@ a{
 }
 
 // end
+
+.back_history{
+  width: 43px;
+  height: 43px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}

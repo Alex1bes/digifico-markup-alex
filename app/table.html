@@ -4,26 +4,29 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1" name=viewport>
   <title>digifico-markup-alex</title>
-<title>table</title>
+  <title>table</title>
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/accordion.css">
+  <link rel="stylesheet" href="css/accordion.css">
 </head>
 
 <body>
   <div class="wrapper">
+    <a onclick="javascript:history.back(); return false;" class="back_history">
+      <img src="img/back.png" alt="Назад">
+    </a>
     <div class="logo_text">INVESTMENT VIEWS</div>
     <nav class="main_menu">
       <div class="align">
         <ul>
           <li>
-            <a href="index.html">HIGHLIGHTS</a>
+            <div class="link to_index_page">HIGHLIGHTS</div>
           </li>
           <li>
-            <a href="story.html">WHAT'S THE STORY?</a>
+            <div class="link to_story_page">WHAT'S THE STORY?</div>
           </li>
           <li>
-            <a href="table.html" class="active">INVESTMENT SOLUTIONS</a>
+            <div class="link active">INVESTMENT SOLUTIONS</div>
           </li>
         </ul>
       </div>
@@ -149,8 +152,9 @@
     </div>
   </div>
   <script src="js/libs.min.js"></script>
-  <script src="libs/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+  <script src="libs/jquery.mobile-1.4.5.min.js"></script>
   <script src="js/accordion.min.js"></script>
+  <script src="js/common.js"></script>
   <script>
   $(function() {
     $.mobile.loading( "show", {
@@ -215,10 +219,22 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
     $(function() {
-      $( ".wrapper" ).on( "swiperight", swipeleftHandler );
-      function swipeleftHandler( event ){
+      var to_back = $('.wrapper'),
+          page_index = $('.to_index_page'),
+          page_story = $('.to_story_page');
+
+      to_back.on( "swiperight", swipeRightHandler );
+      function swipeRightHandler( event ){
         $(location).attr('href', 'index.html');
       }
+
+      page_index.on('click', function(){
+        $(location).attr('href', 'index.html');
+      });
+
+      page_story.on('click', function(){
+        $(location).attr('href', 'story.html');
+      });
     });
   </script>
 </body>
