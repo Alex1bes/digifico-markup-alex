@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name=viewport>
+  <title>story</title>
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="logo_text">INVESTMENT VIEWS</div>
+    <nav class="main_menu">
+      <div class="align">
+        <ul>
+          <li>
+            <a href="index.html">HIGHLIGHTS</a>
+          </li>
+          <li>
+            <a href="story.html" class="active">WHAT'S THE STORY?</a>
+          </li>
+          <li>
+            <a href="table.html">INVESTMENT SOLUTIONS</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="header_block cf">
+      <h1 class="header_page">What's the Story?</h1>
+    </div>
+    <div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet sapiente cum debitis at! Quasi est nesciunt, velit. Eum facilis, nulla, labore fugit vero magni ea harum deleniti itaque, nihil dignissimos?</div>
+      <div>Eius commodi ipsa molestiae eum laboriosam pariatur, voluptate vero quaerat corrupti quisquam culpa, modi. Ea, natus accusantium aliquid rerum laboriosam explicabo vitae sunt molestiae sed voluptatibus! Non aperiam debitis, qui!</div>
+      <div>Iusto nulla, optio beatae, laboriosam corporis error eveniet libero exercitationem illo porro. Nobis ea fuga et repellendus autem nam a eligendi dicta ipsam facere? Quam quia nemo dolorem error labore!</div>
+    </div>
+  </div>
+  <script src="js/libs.min.js"></script>
+  <script src="libs/jquery.mobile-1.4.5.min.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    $(function() {
+      $( ".wrapper" ).on( "swiperight", swipeleftHandler );
+      function swipeleftHandler( event ){
+        $(location).attr('href', 'index.html');
+      }
+    });
+  </script>
+</body>
+</html>

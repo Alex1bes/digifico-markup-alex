@@ -1,0 +1,272 @@
+@import "variables";
+@import "fonts";
+*{
+  box-sizing: border-box;
+}
+body{
+  min-width: 320px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: HelveticaNeue, Arial;
+}
+.wrapper{
+  padding: 15px;
+}
+h1, h2, h3{
+  display: block;
+}
+li{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+.logo_text{
+  color: @blue;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+.main_menu{
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  .align{
+    width: 200%;
+    text-align: center;
+    position: relative;
+    left: -50%;
+  }
+  ul{
+    display: inline-block;
+  }
+  li{
+    display: inline-block;
+  }
+  a{
+    padding: 25px;
+    display: inline-block;
+    &.active{
+      border-bottom: 3px solid @blue;
+    }
+  }
+}
+.logo_page_img{
+  background-size: 100% auto;
+  height: 150px;
+}
+.header_block{
+  .header_page{
+    float: left;
+    width: 70%;
+    font-weight: normal;
+    color: @blue;
+  }
+  .date{
+    float: right;
+    width: 30%;
+    text-align: center;
+  }
+}
+.title_section{
+  border-bottom: 2px solid;
+}
+.title_article{
+  position: relative;
+  padding-right: 24px;
+  &:after{
+    content: '';
+    background: url('../img/arrow.png');
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 16px;
+    height: 27px;
+  }
+}
+.article{
+  border-bottom: 2px solid @gray;
+  margin-bottom: 25px;
+  a{
+    display: block;
+    padding-bottom: 20px;
+  }
+}
+.ui-loader{
+  display: none;
+}
+.ui-page{
+  &:focus {
+    outline: none;
+  }
+}
+
+// table
+
+.column01{
+  width: 18.07909605%;
+}
+.column02{
+  width: 15.25423729%;
+}
+.column03{
+  width: 9.039548023%;
+}
+.column04{
+  width: 9.745762712%;
+}
+.column05{
+  width: 11.15819209%;
+}
+.column06{
+  width: 5.084745763%;
+}
+.column07{
+  width: 7.344632768%;
+}
+.column08{
+  width: 7.203389831%;
+  margin-right: 2.118644068%;
+}
+.column09{
+  width: 5.084745763%;
+}
+.column10{
+  width: 3.531073446%;
+}
+.column11{
+  width: 6.355932203%;
+}
+.static_field{
+  border-bottom: 2px solid @gray;
+  padding-bottom: 12px;
+  font-size: 15px;
+}
+@media (max-width: 767px) {
+  .accordion-xs-collapse{
+    .column02{
+      &:before {
+        content: 'Issuer Class: ';
+      }
+    }
+    .column03{
+      &:before {
+        content: 'Reting Mdy\0027s: ';
+      }
+    }
+    .column04{
+      &:before {
+        content: 'Payment Rank: ';
+      }
+    }
+    .column05{
+      &:before {
+        content: 'ISIN: ';
+      }
+    }
+    .column06{
+      &:before {
+        content: 'Cpn: ';
+      }
+    }
+    .column07{
+      &:before {
+        content: 'Maturity: ';
+      }
+    }
+    .column08{
+      &:before {
+        content: 'Ask Price: ';
+      }
+    }
+    .column09{
+      &:before {
+        content: 'YTW: ';
+      }
+    }
+    .column10{
+      &:before {
+        content: 'YAS: ';
+      }
+    }
+    .column11{
+      &:before {
+        content: 'Minimum: ';
+      }
+    }
+  }
+  .divtable{
+    font-size: 16px;
+  }
+  .tr{
+    border-bottom: 2px solid @gray;
+  }
+  .accordion-xs{
+    .accordion-xs-toggle{
+      transition: all .42s ease;
+      &.collapsed{
+        padding-top: 27px;
+        transition: all .42s ease;
+        &:before{
+          transform: rotate(90deg);
+        }
+      }
+      &:before{
+        position: relative;
+        content: '';
+        float: left;
+        top: 3px;
+        left: -9px;
+        display: inline-block;
+        background: url(../img/arrow.png);
+        background-size: 8px 14px;
+        width: 8px;
+        height: 14px;
+      }
+    }
+  }
+  .inner{
+    .td{
+      text-align: right;
+      padding: 10px 8px!important;
+      border-bottom: 2px solid @gray;
+      &:first-child{
+        margin-top: -8px;
+      }
+      &:before{
+        float: left;
+      }
+    }
+  }
+  .static_field{
+    margin-top: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .column07{
+    text-align: right;
+  }
+  .column08{
+    text-align: right;
+  }
+  .divtable{
+    font-size: 11px;
+    .tr{
+      overflow: hidden;
+    }
+  }
+  .headings{
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+  }
+  .static_field{
+    padding-top: 30px;
+    font-size: 11px;
+  }
+  .column11{
+    text-align: right;
+  }
+}
+
+// end

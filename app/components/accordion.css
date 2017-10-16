@@ -1,0 +1,32 @@
+.divtable .tr {
+  clear: both;
+  width: 100%;
+}
+
+.divtable .th,
+.divtable .td {
+  padding: 5px 0;
+  float: left;
+}
+
+.divtable .th { font-weight: bold; }
+
+@media (max-width: 767px) {
+
+  .accordion-xs .headings { display: none; }
+
+  .accordion-xs .th,
+   .accordion-xs .td {
+    float: none;
+    width: auto;
+    padding: 0;
+  }
+
+  .accordion-xs .accordion-xs-toggle {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .accordion-xs-collapse .inner { padding: 10px; }
+
+}
