@@ -315,9 +315,7 @@ a{
     }
   }
   .section{
-    width: auto;
-    // float: left;
-    display: inline-block;
+    min-width: 360px;
     margin-right: 24px;
   }
   .title_section{
@@ -327,8 +325,6 @@ a{
   .article{
     width: 360px;
     margin-right: 24px;
-    // float: left;
-    display: inline-block;
     border: 2px solid @gray;
     padding: 0 20px 20px;
     line-height: 1.5;
@@ -341,8 +337,13 @@ a{
     overflow: hidden;
   }
   .articles{
-    // width: 500%;
+    display: flex;
+    min-width: 100%;
     margin-top: 35px;
+    overflow-x: auto;
+    &:-webkit-scrollbar {
+      display: none;
+    }
   }
   .title_article{
     height: 84px;

@@ -289,8 +289,7 @@ a {
     font-size: 14px;
   }
   .section {
-    width: auto;
-    display: inline-block;
+    min-width: 360px;
     margin-right: 24px;
   }
   .title_section {
@@ -300,7 +299,6 @@ a {
   .article {
     width: 360px;
     margin-right: 24px;
-    display: inline-block;
     border: 2px solid #D8D8D8;
     padding: 0 20px 20px;
     line-height: 1.5;
@@ -313,7 +311,13 @@ a {
     overflow: hidden;
   }
   .articles {
+    display: flex;
+    min-width: 100%;
     margin-top: 35px;
+    overflow-x: auto;
+  }
+  .articles:-webkit-scrollbar {
+    display: none;
   }
   .title_article {
     height: 84px;
