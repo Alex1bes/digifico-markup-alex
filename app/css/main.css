@@ -16,6 +16,7 @@
 body {
   min-width: 320px;
   width: 100%;
+  line-height: 1.2;
   padding: 0;
   margin: 0;
   font-family: HelveticaNeue, Arial;
@@ -94,20 +95,31 @@ a {
   padding-top: 26px;
 }
 .title_section {
-  border-bottom: 2px solid #D8D8D8;
+  font-size: 16px;
+  font-weight: normal;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #979797;
 }
 .title_article {
   position: relative;
   padding-right: 24px;
+  color: #001489;
+  font-weight: normal;
+  font-size: 18px;
+  margin: 20px 0 15px;
 }
 .title_article:after {
   content: '';
   background: url('../img/arrow.png');
   position: absolute;
   right: 0;
-  top: 0;
-  width: 16px;
-  height: 27px;
+  top: 3px;
+  background-size: 8px 14px;
+  width: 8px;
+  height: 14px;
+}
+.description {
+  padding-bottom: 23px;
 }
 .article {
   border-bottom: 2px solid #D8D8D8;
@@ -235,11 +247,6 @@ a {
   .static_field {
     margin-top: 20px;
   }
-  .title_section {
-    font-size: 18px;
-    font-weight: normal;
-    padding-bottom: 7px;
-  }
 }
 @media (min-width: 768px) {
   .column07 {
@@ -264,6 +271,61 @@ a {
   }
   .column11 {
     text-align: right;
+  }
+  .header_block .header_page {
+    width: 100%;
+    max-width: 550px;
+    float: none;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 22px auto 0;
+    padding-right: 0;
+  }
+  .header_block .date {
+    float: none;
+    width: auto;
+    text-align: center;
+    padding: 0;
+    font-size: 14px;
+  }
+  .section {
+    width: auto;
+    display: inline-block;
+    margin-right: 24px;
+  }
+  .title_section {
+    border: none;
+    margin-bottom: 6px;
+  }
+  .article {
+    width: 360px;
+    margin-right: 24px;
+    display: inline-block;
+    border: 2px solid #D8D8D8;
+    padding: 0 20px 20px;
+    line-height: 1.5;
+  }
+  .article:last-child {
+    margin-right: 0;
+  }
+  .articles_align {
+    width: 100%;
+    overflow: hidden;
+  }
+  .articles {
+    margin-top: 35px;
+  }
+  .title_article {
+    height: 84px;
+    overflow: hidden;
+  }
+  .description {
+    height: 74px;
+    overflow: hidden;
+    padding: 0;
+  }
+  .scroll_ {
+    overflow-x: scroll;
   }
 }
 .back_history {

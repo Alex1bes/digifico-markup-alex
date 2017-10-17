@@ -6,6 +6,7 @@
 body{
   min-width: 320px;
   width: 100%;
+  line-height: 1.2;
   padding: 0;
   margin: 0;
   font-family: HelveticaNeue, Arial;
@@ -84,20 +85,31 @@ a{
   }
 }
 .title_section{
-  border-bottom: 2px solid @gray;
+  font-size: 16px;
+  font-weight: normal;
+  padding-bottom: 7px;
+  border-bottom: 2px solid @gray*.7;
 }
 .title_article{
   position: relative;
   padding-right: 24px;
+  color: @blue;
+  font-weight: normal;
+  font-size: 18px;
+  margin: 20px 0 15px;
   &:after{
     content: '';
     background: url('../img/arrow.png');
     position: absolute;
     right: 0;
-    top: 0;
-    width: 16px;
-    height: 27px;
+    top: 3px;
+    background-size: 8px 14px;
+    width: 8px;
+    height: 14px;
   }
+}
+.description{
+  padding-bottom: 23px;
 }
 .article{
   border-bottom: 2px solid @gray;
@@ -256,11 +268,6 @@ a{
   .static_field{
     margin-top: 20px;
   }
-  .title_section{
-    font-size: 18px;
-    font-weight: normal;
-    padding-bottom: 7px;
-  }
 }
 @media (min-width: 768px) {
   .column07{
@@ -286,9 +293,71 @@ a{
   .column11{
     text-align: right;
   }
-}
 
 // end
+
+  .header_block{
+    .header_page{
+      width: 100%;
+      max-width: 550px;
+      float: none;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 22px auto 0;
+      padding-right: 0;
+    }
+    .date{
+      float: none;
+      width: auto;
+      text-align: center;
+      padding: 0;
+      font-size: 14px;
+    }
+  }
+  .section{
+    width: auto;
+    // float: left;
+    display: inline-block;
+    margin-right: 24px;
+  }
+  .title_section{
+    border: none;
+    margin-bottom: 6px;
+  }
+  .article{
+    width: 360px;
+    margin-right: 24px;
+    // float: left;
+    display: inline-block;
+    border: 2px solid @gray;
+    padding: 0 20px 20px;
+    line-height: 1.5;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  .articles_align{
+    width: 100%;
+    overflow: hidden;
+  }
+  .articles{
+    // width: 500%;
+    margin-top: 35px;
+  }
+  .title_article{
+    height: 84px;
+    overflow: hidden;
+  }
+  .description{
+    height: 74px;
+    overflow: hidden;
+    padding: 0;
+  }
+  .scroll_{
+    overflow-x: scroll;
+  }
+}
+
 
 .back_history{
   width: 43px;
