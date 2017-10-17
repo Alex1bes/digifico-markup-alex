@@ -69,10 +69,12 @@ a {
   display: inline-block;
   transition: 1s;
   border-bottom: 2px solid transparent;
+  color: inherit;
 }
 .main_menu .link.active {
   border-bottom: 2px solid #001489;
   transition-delay: .4s;
+  color: #001489;
 }
 .logo_page_img {
   background-size: 100% auto;
@@ -82,6 +84,7 @@ a {
   float: left;
   width: 70%;
   padding-right: 10px;
+  text-align: left;
 }
 .header_block .header_page {
   font-weight: normal;

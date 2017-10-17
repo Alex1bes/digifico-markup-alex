@@ -17,6 +17,7 @@ gulp.task('less', function() {
 gulp.task('scripts', function() {
   return gulp.src([
       'app/libs/jquery-2.2.4.min.js',
+      'app/libs/jquery.mobile-1.4.5.min.js',
     ])
   .pipe(concat('libs.min.js'))
   .pipe(uglify())
@@ -33,18 +34,11 @@ gulp.task('accordion', function() {
   .pipe(gulp.dest('app/js'));
 });
 
-gulp.task('css-libs', ['less'], function() {
-  return gulp.src('app/css/libs.css')
-  .pipe(cssnano())
-  .pipe(rename({suffix: '.min'}))
-  .pipe(gulp.dest('app/css'));
-});
-
 gulp.task('clean', function() {
   return del.sync('dist');
 });
 
-gulp.task('watch', ['browser-sync', 'css-libs', 'scripts', 'accordion'], function() {
+gulp.task('watch', ['browser-sync', 'scripts', 'accordion'], function() {
   gulp.watch('app/less/**/*.less', ['less']);
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
@@ -63,7 +57,7 @@ gulp.task('build', ['clean', 'less', 'scripts'], function() {
 
   var buildCss = gulp.src([
     'app/css/main.css',
-    'app/css/libs.min.css',
+    'app/css/accordion.min.css',
     ])
     .pipe(gulp.dest('dist/css'));
 
@@ -75,4 +69,7 @@ gulp.task('build', ['clean', 'less', 'scripts'], function() {
 
   var buildHtml = gulp.src('app/*.html')
     .pipe(gulp.dest('dist'));
+
+  var buildImg = gulp.src('app/img/**/*')
+    .pipe(gulp.dest('dist/img'));
 });
