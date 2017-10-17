@@ -66,16 +66,23 @@ a{
   background-size: 100% auto;
   height: 150px;
 }
+.main_page{
+  .header_block{
+    .header_page{
+      float: left;
+      width: 70%;
+      padding-right: 10px;
+    }
+  }
+}
 .header_block{
   .header_page{
-    float: left;
-    width: 70%;
     font-weight: normal;
     color: @blue;
     font-size: 22px;
-    padding-right: 10px;
     padding-bottom: 7px;
     margin: 22px 0 0;
+    text-align: center;
   }
   .date{
     float: right;
@@ -296,22 +303,24 @@ a{
 
 // end
 
-  .header_block{
-    .header_page{
-      width: 100%;
-      max-width: 550px;
-      float: none;
-      text-align: center;
-      text-transform: uppercase;
-      margin: 22px auto 0;
-      padding-right: 0;
-    }
-    .date{
-      float: none;
-      width: auto;
-      text-align: center;
-      padding: 0;
-      font-size: 14px;
+  .main_page{
+    .header_block{
+      .header_page{
+        width: 100%;
+        max-width: 550px;
+        float: none;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 22px auto 0;
+        padding-right: 0;
+      }
+      .date{
+        float: none;
+        width: auto;
+        text-align: center;
+        padding: 0;
+        font-size: 14px;
+      }
     }
   }
   .section{
@@ -341,7 +350,7 @@ a{
     min-width: 100%;
     margin-top: 35px;
     overflow-x: auto;
-    &:-webkit-scrollbar {
+    &::-webkit-scrollbar {
       display: none;
     }
   }
@@ -354,11 +363,20 @@ a{
     overflow: hidden;
     padding: 0;
   }
-  .scroll_{
-    overflow-x: scroll;
+  .flex{
+    display: flex;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .article{
+      min-width: 360px;
+    }
+  }
+
+  .divtable{
+    margin-top: 25px;
   }
 }
-
 
 .back_history{
   width: 43px;
@@ -366,4 +384,34 @@ a{
   position: absolute;
   left: 15px;
   top: 15px;
+}
+
+.text_page{
+  .header_page{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.graph{
+  .title{
+    color: @blue;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+.graph_img{
+  width: 100%;
+  margin-top: 6px;
+}
+.column{
+  column-count: 2;
+  column-width: 300px;
+  column-gap: 15px;
+  line-height: 1.4;
+  p{
+    &:first-child{
+      margin-top: 0;
+    }
+  }
 }

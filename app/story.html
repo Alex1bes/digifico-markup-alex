@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="wrapper">
+  <div class="wrapper text_page">
     <a onclick="javascript:history.back(); return false;" class="back_history">
       <img src="img/back.png" alt="Назад">
     </a>
@@ -31,10 +31,21 @@
     <div class="header_block cf">
       <h1 class="header_page">What's the Story?</h1>
     </div>
-    <div>
-      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet sapiente cum debitis at! Quasi est nesciunt, velit. Eum facilis, nulla, labore fugit vero magni ea harum deleniti itaque, nihil dignissimos?</div>
-      <div>Eius commodi ipsa molestiae eum laboriosam pariatur, voluptate vero quaerat corrupti quisquam culpa, modi. Ea, natus accusantium aliquid rerum laboriosam explicabo vitae sunt molestiae sed voluptatibus! Non aperiam debitis, qui!</div>
-      <div>Iusto nulla, optio beatae, laboriosam corporis error eveniet libero exercitationem illo porro. Nobis ea fuga et repellendus autem nam a eligendi dicta ipsam facere? Quam quia nemo dolorem error labore!</div>
+    <div class="column">
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, minima velit deserunt facere facilis fugiat placeat quibusdam eos repellendus recusandae, iure tenetur illum mollitia veniam at consectetur distinctio, quo quod!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, minima velit deserunt facere facilis fugiat placeat quibusdam eos repellendus recusandae, iure tenetur illum mollitia veniam at consectetur distinctio, quo quod!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, minima velit deserunt facere facilis fugiat placeat quibusdam eos repellendus recusandae, iure tenetur illum mollitia veniam at consectetur distinctio, quo quod!</p>
+      </div>
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, minima velit deserunt facere facilis fugiat placeat quibusdam eos repellendus recusandae, iure tenetur illum mollitia veniam at consectetur distinctio, quo quod!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, minima velit deserunt facere facilis fugiat placeat quibusdam eos repellendus recusandae, iure tenetur illum mollitia veniam at consectetur distinctio, quo quod!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, minima velit deserunt facere facilis fugiat placeat quibusdam eos repellendus recusandae, iure tenetur illum mollitia veniam at consectetur distinctio, quo quod!</p>
+        <div class="graph">
+          <div class="title">Equity market volatility is at multi-year lows</div>
+          <img src="img/graph.png" class="graph_img" alt="graph image">
+        </div>
+      </div>
     </div>
   </div>
   <script src="js/libs.min.js"></script>
@@ -43,8 +54,8 @@
   <script>
     $(function() {
       var to_back = $('.wrapper'),
-          page_index = $('.to_index_page'),
-          page_table = $('.to_table_page');
+        page_index = $('.to_index_page'),
+        page_table = $('.to_table_page');
 
       to_back.on( "swiperight", swipeRightHandler );
       function swipeRightHandler( event ){
@@ -58,7 +69,6 @@
       page_table.on('click', function(){
         $(location).attr('href', 'table.html');
       });
-
 
     });
   </script>
