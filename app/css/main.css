@@ -21,6 +21,19 @@ body {
   margin: 0;
   font-family: HelveticaNeue, Arial;
 }
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 15px;
+  height: 121px;
+  background: #fff;
+  z-index: 999;
+}
+.content {
+  padding-top: 121px;
+}
 .wrapper {
   padding: 15px;
 }
